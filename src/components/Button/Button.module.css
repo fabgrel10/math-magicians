@@ -1,0 +1,28 @@
+button {
+  border: none;
+  background-color: #e0e0e0;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 10px;
+  outline: none;
+}
+
+button:nth-child(4n + 0),
+button:nth-child(19) {
+  background: #f5913e;
+}
+
+button:hover {
+  background-color: #fff;
+}
+
+button:nth-child(17) {
+  grid-column: span 2;
+}
+
+button:nth-child(4n + 0):hover,
+button:nth-child(19):hover {
+  color: #f5913e;
+  background-color: #000;
+}
