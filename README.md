@@ -11,7 +11,7 @@
 
 ## Live Demo
 
-[Coming soon](#/)
+[Here](https://math-magicians.surge.sh/)
 
 ## Table of Contents
 
@@ -68,7 +68,7 @@ To get a local copy up and running follow these simple example steps.
 
 ### Locally preview production build
 
-After creating the production build,  run:
+After creating the production build, run:
 
 - `npm run preview` or `yarn run preview` and open the browser at `http://localhost:5000`
 
