@@ -23,7 +23,7 @@
   - [Start dev server](###start-dev-server)
   - [Build for production](###Build-for-production)
   - [Locally preview production build](###Locally-preview-production-build)
-- [Contact Me](##contact-me)
+- [Get In Touch](##get-in-touch)
 - [Show Your Support](##how-your-support)
 - [Acknowledgments](##acknowledgments)
 - [License](##license)
@@ -72,7 +72,7 @@ After creating the production build, run:
 
 - `npm run preview` or `yarn run preview` and open the browser at `http://localhost:5000`
 
-## Contact Me
+## Get In Touch
 
 - GitHub: [@fabgrel10](https://github.com/fabgrel10)
 - Twitter: [@fabgrel10](https://twitter.com/fabgrel10)
