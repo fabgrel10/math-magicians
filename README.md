@@ -7,11 +7,11 @@
 
 > Environment and tools setup needed to develop a React application.
 
-![screenshot](./app_screenshot.png)
+![screenshot](./app_screenshot.gif)
 
 ## Live Demo
 
-[Coming soon](#/)
+[Here](https://math-magicians.surge.sh/)
 
 ## Table of Contents
 
@@ -23,7 +23,7 @@
   - [Start dev server](###start-dev-server)
   - [Build for production](###Build-for-production)
   - [Locally preview production build](###Locally-preview-production-build)
-- [Contact Me](##contact-me)
+- [Get In Touch](##get-in-touch)
 - [Show Your Support](##how-your-support)
 - [Acknowledgments](##acknowledgments)
 - [License](##license)
@@ -68,11 +68,11 @@ To get a local copy up and running follow these simple example steps.
 
 ### Locally preview production build
 
-After creating the production build,  run:
+After creating the production build, run:
 
 - `npm run preview` or `yarn run preview` and open the browser at `http://localhost:5000`
 
-## Contact Me
+## Get In Touch
 
 - GitHub: [@fabgrel10](https://github.com/fabgrel10)
 - Twitter: [@fabgrel10](https://twitter.com/fabgrel10)
@@ -84,7 +84,7 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- To be announced
+The ideas and inspiration from this project are based on the [sitepoint](https://www.sitepoint.com/) article [_React Tutorial: Build a Calculator App from Scratch_](https://www.sitepoint.com/react-tutorial-build-calculator-app/), by [Madars Biss](https://www.sitepoint.com/author/mbiss/).
 
 ## License
 
