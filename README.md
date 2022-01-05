@@ -84,7 +84,7 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- To be announced
+The ideas and inspiration from this project are based on the [sitepoint](https://www.sitepoint.com/) article [_React Tutorial: Build a Calculator App from Scratch_](https://www.sitepoint.com/react-tutorial-build-calculator-app/), by [Madars Biss](https://www.sitepoint.com/author/mbiss/).
 
 ## License
 
