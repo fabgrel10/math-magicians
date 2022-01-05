@@ -21,8 +21,8 @@ function Calculator() {
   });
 
   const handleClick = (btn) => {
-    const calc = calculate(state, btn.toString());
-    setState(calc);
+    const performOperation = calculate(state, btn.toString());
+    setState(performOperation);
   };
 
   const { total, operation, next } = state;
