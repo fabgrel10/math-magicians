@@ -6,8 +6,8 @@ import Button from '../Button/Button';
 import calculate from '../../logic/calculate';
 
 const btnValues = [
-  ['AC', '+/-', '%', '÷'],
-  [7, 8, 9, 'x'],
+  ['AC', '+-', '%', '/'],
+  [7, 8, 9, 'X'],
   [4, 5, 6, '-'],
   [1, 2, 3, '+'],
   [0, '.', '='],
@@ -24,21 +24,10 @@ class Calculator extends PureComponent {
     };
   }
 
-  handleClick = (btn) => {
-    const operation = calculate(this.state, btn.toString());
-    this.setState(operation);
-  }
-
   render() {
-    const showResult = (state) => {
-      const { total, next, operation } = state;
-      const result = `${total}${operation}${next}`.replace(/null/g, '');
-      return result === '' ? undefined : result;
-    };
-
     return (
       <CalculatorFrame>
-        <Display result={showResult(this.state)} />
+        <Display value="0" />
         <ButtonBox>
           {
           btnValues.flat().map((btn, i) => (
@@ -46,7 +35,8 @@ class Calculator extends PureComponent {
               // eslint-disable-next-line react/no-array-index-key
               key={i}
               value={btn}
-              onClick={() => this.handleClick(btn)}
+              name={btn}
+              onClick={this.handleClick}
             />
           ))
         }
