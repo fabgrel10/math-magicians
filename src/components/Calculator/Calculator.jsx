@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react';
+import { useState } from 'react';
 import CalculatorFrame from '../CalculatorFrame/CalculatorFrame';
 import Display from '../Display/Display';
 import ButtonBox from '../ButtonBox/ButtonBox';
@@ -13,47 +13,37 @@ const btnValues = [
   [0, '.', '='],
 ];
 
-class Calculator extends PureComponent {
-  constructor(props) {
-    super(props);
+function Calculator() {
+  const [state, setState] = useState({
+    total: 0,
+    next: '',
+    operation: null,
+  });
 
-    this.state = {
-      total: '0',
-      next: '',
-      operation: null,
-    };
-  }
+  const handleClick = (btn) => {
+    const calc = calculate(state, btn.toString());
+    setState(calc);
+  };
 
-  handleClick = (btn) => {
-    const operation = calculate(this.state, btn.toString());
-    this.setState(operation);
-  }
+  const { total, operation, next } = state;
 
-  render() {
-    const showResult = (state) => {
-      const { total, next, operation } = state;
-      const result = `${total}${operation}${next}`.replace(/null/g, '');
-      return result === '' ? undefined : result;
-    };
-
-    return (
-      <CalculatorFrame>
-        <Display result={showResult(this.state)} />
-        <ButtonBox>
-          {
+  return (
+    <CalculatorFrame>
+      <Display total={total} next={next} operation={operation} />
+      <ButtonBox>
+        {
           btnValues.flat().map((btn, i) => (
             <Button
               // eslint-disable-next-line react/no-array-index-key
               key={i}
               value={btn}
-              onClick={() => this.handleClick(btn)}
+              onClick={() => handleClick(btn)}
             />
           ))
         }
-        </ButtonBox>
-      </CalculatorFrame>
-    );
-  }
+      </ButtonBox>
+    </CalculatorFrame>
+  );
 }
 
 export default Calculator;

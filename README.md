@@ -7,7 +7,7 @@
 
 > Environment and tools setup needed to develop a React application.
 
-![screenshot](./app_screenshot.png)
+![screenshot](./app_screenshot.gif)
 
 ## Live Demo
 
