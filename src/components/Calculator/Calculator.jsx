@@ -3,20 +3,42 @@ import CalculatorFrame from '../CalculatorFrame/CalculatorFrame';
 import Display from '../Display/Display';
 import ButtonBox from '../ButtonBox/ButtonBox';
 import Button from '../Button/Button';
+import calculate from '../../logic/calculate';
 
 const btnValues = [
-  ['AC', '+-', '%', '/'],
-  [7, 8, 9, 'X'],
+  ['AC', '+/-', '%', '÷'],
+  [7, 8, 9, 'x'],
   [4, 5, 6, '-'],
   [1, 2, 3, '+'],
   [0, '.', '='],
 ];
 
 class Calculator extends PureComponent {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      total: '0',
+      next: '',
+      operation: null,
+    };
+  }
+
+  handleClick = (btn) => {
+    const operation = calculate(this.state, btn.toString());
+    this.setState(operation);
+  }
+
   render() {
+    const showResult = (state) => {
+      const { total, next, operation } = state;
+      const result = `${total}${operation}${next}`.replace(/null/g, '');
+      return result === '' ? undefined : result;
+    };
+
     return (
       <CalculatorFrame>
-        <Display value="0" />
+        <Display result={showResult(this.state)} />
         <ButtonBox>
           {
           btnValues.flat().map((btn, i) => (
@@ -24,9 +46,7 @@ class Calculator extends PureComponent {
               // eslint-disable-next-line react/no-array-index-key
               key={i}
               value={btn}
-              onClick={() => {
-
-              }}
+              onClick={() => this.handleClick(btn)}
             />
           ))
         }

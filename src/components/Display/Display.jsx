@@ -2,14 +2,18 @@ import PropTypes from 'prop-types';
 
 import styles from './Display.module.css';
 
-const Display = ({ value }) => (
+const Display = ({ result }) => (
   <div className={styles.display} mode="single" max={70}>
-    {value}
+    <p>{result}</p>
   </div>
 );
 
 Display.propTypes = {
-  value: PropTypes.string.isRequired,
+  result: PropTypes.string,
+};
+
+Display.defaultProps = {
+  result: '0',
 };
 
 export default Display;
