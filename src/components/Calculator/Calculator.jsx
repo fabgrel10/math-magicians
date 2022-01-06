@@ -5,6 +5,8 @@ import ButtonBox from '../ButtonBox/ButtonBox';
 import Button from '../Button/Button';
 import calculate from '../../logic/calculate';
 
+import styles from './Calculator.module.css';
+
 const btnValues = [
   ['AC', '+/-', '%', '÷'],
   [7, 8, 9, 'x'],
@@ -28,21 +30,28 @@ function Calculator() {
   const { total, operation, next } = state;
 
   return (
-    <CalculatorFrame>
-      <Display total={total} next={next} operation={operation} />
-      <ButtonBox>
-        {
-          btnValues.flat().map((btn, i) => (
-            <Button
-              // eslint-disable-next-line react/no-array-index-key
-              key={i}
-              value={btn}
-              onClick={() => handleClick(btn)}
-            />
-          ))
-        }
-      </ButtonBox>
-    </CalculatorFrame>
+    <div className={styles.wrapper}>
+      <div className={styles.column}>
+        {' '}
+        <h1 className={styles.title}>Let&rsquo;s do some math!</h1>
+      </div>
+
+      <div className={styles.column}>
+        <CalculatorFrame>
+          <Display total={total} next={next} operation={operation} />
+          <ButtonBox>
+            {btnValues.flat().map((btn, i) => (
+              <Button
+                // eslint-disable-next-line react/no-array-index-key
+                key={i}
+                value={btn}
+                onClick={() => handleClick(btn)}
+              />
+            ))}
+          </ButtonBox>
+        </CalculatorFrame>
+      </div>
+    </div>
   );
 }
 

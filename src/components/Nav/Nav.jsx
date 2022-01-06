@@ -51,7 +51,9 @@ export default function Nav() {
       <Navbar.Logo>Math Magicians</Navbar.Logo>
       <Navbar.Items>
         <Navbar.Item>Home</Navbar.Item>
+        <p>|</p>
         <Navbar.Item>Calculator</Navbar.Item>
+        <p>|</p>
         <Navbar.Item>Quote</Navbar.Item>
       </Navbar.Items>
     </Navbar.Wrapper>
