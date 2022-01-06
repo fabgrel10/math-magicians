@@ -1,12 +1,12 @@
 import styled, { createGlobalStyle } from 'styled-components';
+import Nav from './components/Nav/Nav';
 import Calculator from './components/Calculator/Calculator';
-
-import './App.css';
 
 function App() {
   return (
     <div>
       <CSSReset />
+      <Nav />
       <Container>
         <Calculator />
       </Container>
@@ -42,8 +42,8 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #ece9e6;
-  background: linear-gradient(to right, #ece9e6, #f2f2f2);
+  background: #ffd60a;
+
 `;
 
 export default App;
