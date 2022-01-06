@@ -3,12 +3,12 @@
   width: 100%;
   margin-bottom: 10px;
   padding: 0 10px;
-  background-color: #858693;
+  background-color: #e0e0e0;
   border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  color: white;
+  color: #000814;
   font-size: 48px;
   font-weight: bold;
   box-sizing: border-box;
