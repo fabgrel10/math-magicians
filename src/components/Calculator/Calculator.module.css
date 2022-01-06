@@ -13,3 +13,14 @@
   font-weight: bold;
   padding-left: 20px;
 }
+
+@media (max-width: 600px) {
+  .column {
+    padding: 0;
+    padding-right: 10px;
+  }
+
+  .wrapper {
+    grid-gap: 0;
+  }
+}
