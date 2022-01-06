@@ -15,18 +15,17 @@
 
 ## Table of Contents
 
-- [Description](##description)
-- [Built With](##built-with)
-- [Getting Started](##getting-started)
-  - [Setup](##setup)
-- [Scripts](##scripts)
-  - [Start dev server](###start-dev-server)
-  - [Build for production](###Build-for-production)
-  - [Locally preview production build](###Locally-preview-production-build)
-- [Connect With Me](##connect-with-me)
-- [Show Your Support](##how-your-support)
-- [Acknowledgments](##acknowledgments)
-- [License](##license)
+- [Description](#description)
+- [Built With](#built-with)
+- [Getting Started](#getting-started)
+  - [Setup](#setup)
+- [Scripts](#scripts)
+  - [Start dev server](#start-dev-server)
+  - [Build for production](#Build-for-production)
+  - [Locally preview production build](#Locally-preview-production-build)
+- [Show Your Support](#how-your-support)
+- [Acknowledgments](#acknowledgments)
+- [License](#license)
 
 ## Description
 
