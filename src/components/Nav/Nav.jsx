@@ -63,7 +63,7 @@ export default function Nav() {
 
 const Navbar = {
   Wrapper: styled.nav`
-    flex: 1;
+    width: 100%;
     align-self: flex-start;
     padding: 1rem 3rem;
     display: flex;

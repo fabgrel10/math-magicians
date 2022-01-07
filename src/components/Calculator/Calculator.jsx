@@ -1,8 +1,8 @@
 import { useState } from 'react';
-import CalculatorFrame from '../CalculatorFrame/CalculatorFrame';
-import Display from '../Display/Display';
-import ButtonBox from '../ButtonBox/ButtonBox';
-import Button from '../Button/Button';
+import CalculatorFrame from './CalculatorFrame/CalculatorFrame';
+import Display from './Display/Display';
+import ButtonBox from './ButtonBox/ButtonBox';
+import Button from './Button/Button';
 import calculate from '../../logic/calculate';
 
 import styles from './Calculator.module.css';
@@ -30,7 +30,7 @@ function Calculator() {
   const { total, operation, next } = state;
 
   return (
-    <div className="container">
+    <div className="secondary-container">
       <div className={styles.wrapper}>
         <div className={styles.column}>
           {' '}
