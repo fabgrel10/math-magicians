@@ -35,13 +35,13 @@ export default function Nav() {
             <MobileNavbar.Icon>
               <Link to="/Calculator"><FaCalculator /></Link>
             </MobileNavbar.Icon>
-            Home
+            Calculator
           </MobileNavbar.Item>
           <MobileNavbar.Item>
             <MobileNavbar.Icon>
               <Link to="/Quote"><FaQuoteLeft /></Link>
             </MobileNavbar.Icon>
-            Home
+            Quote
           </MobileNavbar.Item>
         </MobileNavbar.Items>
       </MobileNavbar.Wrapper>
@@ -75,6 +75,7 @@ const Navbar = {
     @media only screen and (max-width: 40em) {
       position: fixed;
       width: 100vw;
+      top: 0;
     }
   `,
   Logo: styled.h1`

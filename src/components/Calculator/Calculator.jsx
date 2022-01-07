@@ -30,26 +30,27 @@ function Calculator() {
   const { total, operation, next } = state;
 
   return (
-    <div className={styles.wrapper}>
-      <div className={styles.column}>
-        {' '}
-        <h1 className={styles.title}>Let&rsquo;s do some math!</h1>
-      </div>
-
-      <div className={styles.column}>
-        <CalculatorFrame>
-          <Display total={total} next={next} operation={operation} />
-          <ButtonBox>
-            {btnValues.flat().map((btn, i) => (
-              <Button
+    <div className="container">
+      <div className={styles.wrapper}>
+        <div className={styles.column}>
+          {' '}
+          <h1 className={styles.title}>Let&rsquo;s do some math!</h1>
+        </div>
+        <div className={styles.column}>
+          <CalculatorFrame>
+            <Display total={total} next={next} operation={operation} />
+            <ButtonBox>
+              {btnValues.flat().map((btn, i) => (
+                <Button
                 // eslint-disable-next-line react/no-array-index-key
-                key={i}
-                value={btn}
-                onClick={() => handleClick(btn)}
-              />
-            ))}
-          </ButtonBox>
-        </CalculatorFrame>
+                  key={i}
+                  value={btn}
+                  onClick={() => handleClick(btn)}
+                />
+              ))}
+            </ButtonBox>
+          </CalculatorFrame>
+        </div>
       </div>
     </div>
   );
