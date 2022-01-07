@@ -1,6 +1,11 @@
+import {
+  Routes,
+  Route,
+} from 'react-router-dom';
 import styled, { createGlobalStyle } from 'styled-components';
 import Nav from './components/Nav/Nav';
 import Calculator from './components/Calculator/Calculator';
+import Home from './components/Home/Home';
 
 function App() {
   return (
@@ -8,7 +13,10 @@ function App() {
       <CSSReset />
       <Nav />
       <Container>
-        <Calculator />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="calculator" element={<Calculator />} />
+        </Routes>
       </Container>
     </div>
   );
@@ -32,6 +40,11 @@ const CSSReset = createGlobalStyle`
   body {
 
     font-size: 1.4rem;
+  }
+
+  a {
+    color: #ffc300;
+    text-decoration: none;
   }
 `;
 

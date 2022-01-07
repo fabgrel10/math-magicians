@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { FaHome, FaCalculator, FaQuoteLeft } from 'react-icons/fa';
 
@@ -26,19 +27,19 @@ export default function Nav() {
         <MobileNavbar.Items>
           <MobileNavbar.Item>
             <MobileNavbar.Icon>
-              <FaHome />
+              <Link to="/"><FaHome /></Link>
             </MobileNavbar.Icon>
             Home
           </MobileNavbar.Item>
           <MobileNavbar.Item>
             <MobileNavbar.Icon>
-              <FaCalculator />
+              <Link to="/Calculator"><FaCalculator /></Link>
             </MobileNavbar.Icon>
             Home
           </MobileNavbar.Item>
           <MobileNavbar.Item>
             <MobileNavbar.Icon>
-              <FaQuoteLeft />
+              <Link to="/Quote"><FaQuoteLeft /></Link>
             </MobileNavbar.Icon>
             Home
           </MobileNavbar.Item>
@@ -50,11 +51,11 @@ export default function Nav() {
     <Navbar.Wrapper>
       <Navbar.Logo>Math Magicians</Navbar.Logo>
       <Navbar.Items>
-        <Navbar.Item>Home</Navbar.Item>
+        <Navbar.Item><Link to="/">Home</Link></Navbar.Item>
         <p>|</p>
-        <Navbar.Item>Calculator</Navbar.Item>
+        <Navbar.Item><Link to="/Calculator">Calculator</Link></Navbar.Item>
         <p>|</p>
-        <Navbar.Item>Quote</Navbar.Item>
+        <Navbar.Item><Link to="/Quote">Quote</Link></Navbar.Item>
       </Navbar.Items>
     </Navbar.Wrapper>
   );
