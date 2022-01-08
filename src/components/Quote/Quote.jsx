@@ -8,7 +8,6 @@ const Quotes = [
   ['"Testing leads to failure, and failure leads to understanding." - Burt Rutan'],
   ['"The best error message is the one that never shows up." - Thomas Fuchs'],
   ['“The most damaging phrase in the language is.. it\'s always been done this way” - Grace Hopper'],
-  ['"Mathematics is not about numbers, equations, computations, or algorithms: it\'s about understanding" - William Paul Thurston'],
 ];
 
 class Quote extends PureComponent {
@@ -16,21 +15,27 @@ class Quote extends PureComponent {
     super(props);
 
     this.state = {
-      quote: '',
+      quote: '"Mathematics is not about numbers, equations, computations, or algorithms: it\'s about understanding" - William Paul Thurston',
     };
   }
 
   componentDidMount() {
-    this.setState({
-      quote: Quotes[Math.floor(Math.random() * Quotes.length)],
-    });
+    this.timer = setInterval(() => {
+      this.setState({
+        quote: Quotes[Math.floor(Math.random() * Quotes.length)],
+      });
+    }, 5000);
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.timer);
   }
 
   render() {
     const { quote } = this.state;
     return (
       <div className="secondary-container">
-        <div className="paragraph">{quote}</div>
+        <div className="paragraph quote">{quote}</div>
       </div>
     );
   }

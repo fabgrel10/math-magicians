@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import styled from 'styled-components';
 import { FaHome, FaCalculator, FaQuoteLeft } from 'react-icons/fa';
+
+import './Nav.css';
 
 export default function Nav() {
   const [windowDimension, setWindowDimension] = useState(null);
@@ -23,90 +24,40 @@ export default function Nav() {
 
   if (isMobile) {
     return (
-      <MobileNavbar.Wrapper>
-        <MobileNavbar.Items>
-          <MobileNavbar.Item>
-            <MobileNavbar.Icon>
+      <nav className="nav-mobile">
+        <ul className="nav-mobile__items">
+          <li className="nav-mobile__item">
+            <span className="nav-mobile__icon">
               <Link to="/"><FaHome /></Link>
-            </MobileNavbar.Icon>
+            </span>
             Home
-          </MobileNavbar.Item>
-          <MobileNavbar.Item>
-            <MobileNavbar.Icon>
-              <Link to="/Calculator"><FaCalculator /></Link>
-            </MobileNavbar.Icon>
+          </li>
+          <li className="nav-mobile__item">
+            <span className="nav-mobile__icon">
+              <Link to="/calculator"><FaCalculator /></Link>
+            </span>
             Calculator
-          </MobileNavbar.Item>
-          <MobileNavbar.Item>
-            <MobileNavbar.Icon>
-              <Link to="/Quote"><FaQuoteLeft /></Link>
-            </MobileNavbar.Icon>
+          </li>
+          <li className="nav-mobile__item">
+            <span className="nav-mobile__icon">
+              <Link to="/quote"><FaQuoteLeft /></Link>
+            </span>
             Quote
-          </MobileNavbar.Item>
-        </MobileNavbar.Items>
-      </MobileNavbar.Wrapper>
+          </li>
+        </ul>
+      </nav>
     );
   }
   return (
-    <Navbar.Wrapper>
-      <Navbar.Logo>Math Magicians</Navbar.Logo>
-      <Navbar.Items>
-        <Navbar.Item><Link to="/">Home</Link></Navbar.Item>
+    <nav className="nav">
+      <h1>Math Magicians</h1>
+      <ul>
+        <li><Link to="/">Home</Link></li>
         <p>|</p>
-        <Navbar.Item><Link to="/Calculator">Calculator</Link></Navbar.Item>
+        <li><Link to="/Calculator">Calculator</Link></li>
         <p>|</p>
-        <Navbar.Item><Link to="/Quote">Quote</Link></Navbar.Item>
-      </Navbar.Items>
-    </Navbar.Wrapper>
+        <li><Link to="/Quote">Quote</Link></li>
+      </ul>
+    </nav>
   );
 }
-
-const Navbar = {
-  Wrapper: styled.nav`
-    width: 100%;
-    align-self: flex-start;
-    padding: 1rem 3rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: #ffd60a;
-    background-color: #000814;
-
-    @media only screen and (max-width: 40em) {
-      position: fixed;
-      width: 100vw;
-      top: 0;
-    }
-  `,
-  Logo: styled.h1`
-    border: 1px solid gray;
-    padding: 0.5rem 1rem;
-  `,
-  Items: styled.ul`
-    display: flex;
-    list-style: none;
-  `,
-  Item: styled.li`
-    padding: 0 1rem;
-    cursor: pointer;
-  `,
-};
-
-const MobileNavbar = {
-  Wrapper: styled(Navbar.Wrapper)`
-    align-self: flex-end;
-    justify-content: center;
-  `,
-  Items: styled(Navbar.Items)`
-    flex: 1;
-    padding: 0 2rem;
-    justify-content: space-around;
-  `,
-  Item: styled(Navbar.Item)`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-size: 1.2rem;
-  `,
-  Icon: styled.span``,
-};
