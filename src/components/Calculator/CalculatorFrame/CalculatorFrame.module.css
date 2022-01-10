@@ -1,0 +1,21 @@
+.wrapper {
+  width: 540px;
+  height: 540px;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  background-color: #000814;
+}
+
+@media (max-width: 840px) {
+  .wrapper {
+    height: 440px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .wrapper {
+    height: 350px;
+  }
+}
