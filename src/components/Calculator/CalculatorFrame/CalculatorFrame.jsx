@@ -6,12 +6,8 @@ import styles from './CalculatorFrame.module.css';
 class CalculatorFrame extends PureComponent {
   render() {
     const { children } = this.props;
-    return <div className={styles.wrapper}>{children}</div>;
+    return <div className={styles.wrapper} title="calculator-frame-title">{children}</div>;
   }
 }
-
-CalculatorFrame.propTypes = {
-  children: PropTypes.node.isRequired,
-};
 
 export default CalculatorFrame;

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import CalculatorFrame from './CalculatorFrame/CalculatorFrame';
 import Display from './Display/Display';
 import ButtonBox from './ButtonBox/ButtonBox';
