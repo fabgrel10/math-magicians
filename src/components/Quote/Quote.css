@@ -1,0 +1,9 @@
+.quote {
+  text-transform: uppercase;
+  letter-spacing: 0.5em;
+}
+
+.quote .letter {
+  display: inline-block;
+  line-height: 1em;
+}
