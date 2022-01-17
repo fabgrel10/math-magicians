@@ -11,8 +11,8 @@
 
 ## Live Demo
 
-[Netlify:](https://fabgrel10-math-magicians.netlify.app/)
-[Surge:](https://math-magicians.surge.sh/)
+- [Netlify](https://fabgrel10-math-magicians.netlify.app/)
+- [Surge](https://math-magicians.surge.sh/)
 
 ## Table of Contents
 
